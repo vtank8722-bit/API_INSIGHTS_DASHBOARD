@@ -1,0 +1,22 @@
+<h2>GitHub API Insights Dashboard</h2>
+
+<form method="POST">
+    <input name="repo" placeholder="e.g. torvalds/linux" required>
+    <br><br>
+
+    <textarea name="note" placeholder="Your observation" required></textarea>
+    <br><br>
+
+    <select name="priority">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Generate Insight (Auto Fetch)</button>
+</form>
+
+<br>
+<a href="/insights">View Dashboard</a>

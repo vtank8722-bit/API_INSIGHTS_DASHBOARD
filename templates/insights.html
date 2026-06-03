@@ -1,0 +1,33 @@
+<h2>Insights Dashboard</h2>
+
+<a href="/">Add New</a>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Repo</th>
+        <th>Stars</th>
+        <th>Forks</th>
+        <th>Issues</th>
+        <th>Language</th>
+        <th>Note</th>
+        <th>Priority</th>
+        <th>Time</th>
+        <th>Action</th>
+    </tr>
+
+    {% for item in data %}
+    <tr>
+        <td>{{ item.repo_name }}</td>
+        <td>{{ item.stars }}</td>
+        <td>{{ item.forks }}</td>
+        <td>{{ item.open_issues }}</td>
+        <td>{{ item.language }}</td>
+        <td>{{ item.note }}</td>
+        <td>{{ item.priority }}</td>
+        <td>{{ item.timestamp }}</td>
+        <td>
+            <a href="/delete/{{ item.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
